@@ -1,0 +1,107 @@
+
+.input__wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.input__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px){
+    .input__text{
+        width: 100%;
+    }
+}
+
+.input__title{
+    font-size: 400%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1144px){
+    .input__title{
+        font-size: 330%;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .input__title{
+        font-size: 300%;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .input__title{
+        font-size: 230%;
+        margin-bottom: 25px;
+    }
+}
+
+.input__subtitle {
+    font-size: 150%;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.input__form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input__label{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #dcc295;
+    border-radius: 15px;
+    width: 90%;
+    padding: 2% 4%;
+    margin-bottom: 20px;
+}
+
+.input__input{
+    border: none;
+    /*padding: 2% 4%;*/
+    /*width: 50%;*/
+    outline: none;
+    font-size: 100%;
+    background: inherit;
+}
+
+/*.input__button{*/
+/*    border-radius: 15px;*/
+/*    background-color: #dcc295;*/
+/*    color: rgb(77, 77, 71);*/
+/*    padding: 3% 6%;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.input__list{
+    border: 2px solid #dcc295;
+    border-radius: 15px;
+    width: 90%;
+    padding: 2% 4%;
+
+}
+
+.input__item{
+    border: 2px solid #dcc295;
+    border-radius: 15px;
+    width: 90%;
+    padding: 2% 4%;
+}
