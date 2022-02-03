@@ -27,7 +27,7 @@ function Contacts(){
                     </a>
                 </li>
                 <li className={'contacts__item'}>
-                    <a href = {'https://github.com/Valynoka/Gnivc_test'} className={'contacts__link'}>
+                    <a href = {'https://github.com/Valynoka/Gvinc_test'} className={'contacts__link'}>
                         <img src={git} className={'contacts__icon-img'} alt={'icon'}/>
                     </a>
                 </li>
