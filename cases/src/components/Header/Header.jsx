@@ -14,10 +14,10 @@ function Header() {
                 <nav className={'header__menu'}>
                     <ul className={'header__menu-list'}>
                         <li className={'header__item'}>
-                            <Link className={'header__item-link'} to = {'/'}>Главная</Link>
+                            <Link className={'header__item-link'} to = {'/'}>Версия1</Link>
                         </li>
                         <li className={'header__item'}>
-                            <Link className={'header__item-link'} to = {'Contacts'}>Контакты</Link>
+                            <Link className={'header__item-link'} to = {'SecondInput'}>Версия2</Link>
                         </li>
                     </ul>
                 </nav>

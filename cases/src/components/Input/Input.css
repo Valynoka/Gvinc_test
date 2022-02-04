@@ -2,7 +2,6 @@
 .input__wrapper{
     display: flex;
     justify-content: center;
-    padding: 50px;
 }
 
 .input__text{
@@ -10,7 +9,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
     position: relative;
     z-index: 2;
 }
@@ -82,15 +80,6 @@
     background: inherit;
 }
 
-/*.input__button{*/
-/*    border-radius: 15px;*/
-/*    background-color: #dcc295;*/
-/*    color: rgb(77, 77, 71);*/
-/*    padding: 3% 6%;*/
-/*    border: none;*/
-/*    cursor: pointer;*/
-/*}*/
-
 .input__list{
     border: 2px solid #dcc295;
     border-radius: 15px;
@@ -104,4 +93,12 @@
     border-radius: 15px;
     width: 90%;
     padding: 2% 4%;
+}
+
+/*SecondInput*/
+
+.input__select{
+    border: 2px solid #dcc295;
+    width: 100%;
+    border-radius: 10px;
 }

@@ -19,6 +19,7 @@ function Input() {
                 "с/ш": ["%а", "%у", "%", "%ом", "%е"],
                 ы: ["ов", "ам", "%", "ами", "ах"],
                 ь: ["я", "ю", "я", "ем", "е"],
+                ль: ["ли","ле", "лю", "лей", "ле"],
                 уль: ["ули", "уле", "улю", "улей", "уле"],
                 "(ч/ш/д/т)ь": ["%и", "%и", "%ь", "%ью", "%и"],
                 я: ["и", "е", "ю", "ей", "е"]
@@ -43,7 +44,7 @@ function Input() {
             groupped,
             forPseudo;
         for (let i in strPub) {
-            if (i.length > 1 && str.slice(-i.length) == i) {
+            if (i.length > 1 && str.slice(-i.length) === i) {
                 // для окончаний, длиной >1
                 lastIndex = i;
                 reformedStr = str.slice(0, -lastIndex.length);
@@ -55,7 +56,7 @@ function Input() {
                     for (let o = 0; o < splitted.length; o++) {
                         groupped = splitted[o] + c;
                         strPub[groupped] = strPub[i];
-                        if (str.slice(-groupped.length) == groupped) {
+                        if (str.slice(-groupped.length) === groupped) {
                             for (
                                 let x = 0, eachSplited = strPub[groupped];
                                 x < eachSplited.length;
@@ -77,7 +78,7 @@ function Input() {
                 forLong = i; // группированные окончания, разделающиеся слешем
             for (let o in exs) {
                 // поиск исключений
-                if (str.slice(-o.length) == o) reformedStr = str.slice(0, -exs[o]);
+                if (str.slice(-o.length) === o) reformedStr = str.slice(0, -exs[o]);
             }
         }
         return (
