@@ -7,26 +7,33 @@ function SecondInput() {
     const [value, setValue] = useState('Падеж');
 
     let input = [...words];
-    console.log(input)
     let lastLetter = input[input.length-1];
-    console.log(lastLetter)
+    let lastIndex;
 
-    const consonantLetters = ["б", "в", "м", "г", "д", "л", "ж", "з", "к", "н", "п", "т", "ф", "ч", "ц", 'щ', 'р', 'х']
+
+    const consonantLetters = ["б", "в", "м", "г", "д", "л", "ж", "з", "к", "н", "п", "т", "ф", "ч", "ц", 'щ', 'р', 'х'];
+    const longNamesLetter = ["й", "ь"];
 
     // Родительный падеж
     if (lastLetter === 'а' && value === 'Родительный падеж') {
         input.pop();
         input.push("ы");
     } else if (lastLetter === consonantLetters.find((item)=> item === lastLetter) && value === 'Родительный падеж'){
-        input.push(input.splice(input.lastIndexOf(lastLetter)+1, 1, 'a'))
+        input.splice(input.lastIndexOf(lastLetter)+1, 1, 'a');
+    } else if (lastLetter === longNamesLetter.find((item)=> item === lastLetter) && value === 'Родительный падеж'){
+        input.splice(input.lastIndexOf(lastLetter), 1, 'я');
     }
+
 
     //Дательный падеж
     if (lastLetter === 'а' && value === 'Дательный падеж') {
         input.pop();
         input.push('е');
     } else if (lastLetter === consonantLetters.find((item)=> item === lastLetter) && value === 'Дательный падеж'){
-        input.push(input.splice(input.lastIndexOf(lastLetter)+1, 1, 'у'))
+        input.splice(input.lastIndexOf(lastLetter)+1, 1, 'у');
+    } else if (lastLetter === longNamesLetter.find((item)=> item === lastLetter) && value === 'Дательный падеж'){
+        input.splice(input.lastIndexOf(lastLetter), 1, 'ю');
+
     }
 
     //Винительный падеж
@@ -34,21 +41,27 @@ function SecondInput() {
         input.pop();
         input.push('у');
     } else if (lastLetter === consonantLetters.find((item)=> item === lastLetter) && value === 'Винительный падеж'){
-        input.push(input.splice(input.lastIndexOf(lastLetter)+1, 0, ''))
+        input.splice(input.lastIndexOf(lastLetter)+1, 0, '');
+    } else if (lastLetter === longNamesLetter.find((item)=> item === lastLetter) && value === 'Винительный падеж'){
+        input.splice(input.lastIndexOf(lastLetter), 1, 'я');
     }
     //Творительный падеж
     if (lastLetter === 'а'&& value === 'Творительный падеж') {
         input.pop();
         input.push('ой');
     } else if (lastLetter === consonantLetters.find((item)=> item === lastLetter) && value === 'Творительный падеж'){
-        input.push(input.splice(input.lastIndexOf(lastLetter)+1, 1, 'ом'))
+        input.splice(input.lastIndexOf(lastLetter)+1, 1, 'ом');
+    } else if (lastLetter === longNamesLetter.find((item)=> item === lastLetter) && value === 'Творительный падеж'){
+        input.splice(input.lastIndexOf(lastLetter), 1, 'ем');
     }
     //Предложный падеж
     if (lastLetter === 'а'&& value === 'Предложный падеж') {
         input.pop();
         input.push('е');
     } else if (lastLetter === consonantLetters.find((item)=> item === lastLetter) && value === 'Предложный падеж'){
-        input.push(input.splice(input.lastIndexOf(lastLetter)+1, 1, 'у'))
+        input.splice(input.lastIndexOf(lastLetter)+1, 1, 'у');
+    } else if (lastLetter === longNamesLetter.find((item)=> item === lastLetter) && value === 'Предложный падеж'){
+        input.splice(input.lastIndexOf(lastLetter), 1, 'ю');
     }
 
     return (
