@@ -66,11 +66,11 @@ function SecondInput() {
         input.pop();
         input.push('е');
     } else if (lastLetter === consonantLetters.find((item)=> item === lastLetter) && value === 'Предложный падеж'){
-        input.splice(input.lastIndexOf(lastLetter)+1, 1, 'у');
+        input.splice(input.lastIndexOf(lastLetter)+1, 1, 'е');
     } else if (lastLetter === longNamesLetter.find((item)=> item === lastLetter) && value === 'Предложный падеж'){
-        input.splice(input.lastIndexOf(lastLetter), 1, 'ю');
+        input.splice(input.lastIndexOf(lastLetter), 1, 'е');
     } else if (lastLetter === differentConsonantLetter.find((item)=> item === lastLetter) && value === 'Предложный падеж'){
-        input.splice(input.lastIndexOf(lastLetter) + 1, 1, 'у');
+        input.splice(input.lastIndexOf(lastLetter) + 1, 1, 'е');
     }
 
     return (
