@@ -106,8 +106,6 @@ function Input() {
                                onChange={(event) => setWord(event.target.value.replace(/[^а-я]/,''))}
                         />
                     </label>
-                    {/*<button className={'startPage__button button'}>Отправить</button>*/}
-                    {/*<span> {word} </span>*/}
                     <ul className={'input__list'}>
                         <li className={'input__item'}>Родительный падеж:
                             <span> {toCase(word, 'р')}</span>

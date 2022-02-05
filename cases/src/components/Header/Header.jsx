@@ -19,6 +19,9 @@ function Header() {
                         <li className={'header__item'}>
                             <Link className={'header__item-link'} to = {'SecondInput'}>Версия2</Link>
                         </li>
+                        <li className={'header__item'}>
+                            <Link className={'header__item-link'} to = {'ThirdInput'}>Версия3</Link>
+                        </li>
                     </ul>
                 </nav>
 

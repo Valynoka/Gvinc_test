@@ -8,12 +8,12 @@ function SecondInput() {
 
     let input = [...words];
     let lastLetter = input[input.length-1];
-    let lastIndex;
 
 
     const consonantLetters = ["б", "в", "м", "г", "д", "л", "ж", "з", "к", "н", "п", "т", "ф", "ч", "ц", 'щ', 'р', 'х'];
     const longNamesLetter = ["й", "ь"];
     const differentConsonantLetter = ["ш", "ж", "ч", "к"];
+    const vowelLetters = [];
 
     // Родительный падеж
     if (lastLetter === 'а' && value === 'Родительный падеж') {
@@ -26,7 +26,6 @@ function SecondInput() {
     } else if (lastLetter === differentConsonantLetter.find((item)=> item === lastLetter) && value === 'Родительный падеж'){
         input.splice(input.lastIndexOf(lastLetter) + 1, 1, 'а');
     }
-
 
     //Дательный падеж
     if (lastLetter === 'а' && value === 'Дательный падеж') {
